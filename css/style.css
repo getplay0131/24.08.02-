@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#layout {
+  display: flex;
+  height: calc(100vh - 120px);
+}
+/****************/
+header {
+  width: 200px;
+}
+
+#logo img {
+  width: 100%;
+}
+
+header ul {
+  margin-top: 50px;
+}
+header li {
+  position: relative;
+}
+header li:hover .subMenu {
+  display: block;
+  z-index: 1;
+}
+header ul a {
+  display: block;
+  text-align: center;
+}
+
+.mainMenu {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.05rem;
+  border: 2px solid yellowgreen;
+  background-color: rgb(239, 255, 193);
+}
+.mainMenu:hover {
+  background: yellowgreen;
+  color: white;
+  text-shadow: 0 0 3px rgb(60, 111, 10);
+}
+
+.subMenu {
+  background: rgb(251, 255, 229);
+  box-shadow: 0 0 5px rgb(60, 111, 10);
+  padding: 7px 0;
+  position: absolute;
+  width: 100%;
+  top: 5px;
+  right: -95%;
+  display: none;
+}
+.subMenu a {
+  padding: 8px;
+}
+.subMenu a:hover {
+  background: rgb(228, 243, 141);
+}
+
+/****************/
+main {
+  width: 400px;
+  padding: 20px;
+}
+#lorem {
+  display: flex;
+  align-items: center;
+}
+#lorem img {
+  width: 70px;
+  padding: 10px;
+  padding-left: 0;
+}
+#lorem div {
+  flex: 5;
+  padding-left: 10px;
+}
+#lorem h3 {
+  padding-bottom: 5px;
+}
+
+#arr_1.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 200, "opsz" 24;
+  font-size: 3rem;
+  transform: translateY(15px);
+  transition: all 0.5s;
+}
+#arr_1.material-symbols-outlined:hover {
+  transform: translate(10px, 15px);
+  color: blue;
+}
+/****************/
+
+main h2 {
+  border-bottom: 45px solid rgb(205, 218, 239);
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid transparent;
+  width: 180px;
+  text-align: center;
+}
+main h2 span {
+  transform: translateY(37px);
+  display: inline-block;
+  font-size: 1.3rem;
+}
+
+#notice {
+  border: 0px solid red;
+  padding-top: 0px;
+}
+
+#notice ol {
+  list-style: none;
+  border-top: 3px solid rgb(205, 218, 239);
+  line-height: 200%;
+  padding-top: 10px;
+}
+#notice ol span {
+  float: right;
+  color: #666;
+}
+#notice ol a:hover {
+  color: dodgerblue;
+  text-decoration: underline;
+}
+/*******/
+
+#gallery div {
+  display: flex;
+  text-align: center;
+  border-top: 3px solid rgb(205, 218, 239);
+  padding: 10px;
+  margin: auto;
+}
+#gallery div img {
+  padding: 20px 10px 10px;
+}
+#gallery h3 a:hover {
+  text-decoration: underline;
+  color: rgb(153, 209, 96);
+}
+/********/
+#link {
+  display: flex;
+  padding: 10px;
+  border-top: 3px dotted rgb(153, 209, 96);
+  padding-top: 40px;
+  margin-top: 40px;
+  text-align: center;
+}
+#link div {
+  transition: all 0.5s;
+}
+#link div:hover {
+  background: #ddd;
+  padding: 7px;
+  border-radius: 10px;
+}
+#link img {
+  padding: 5px;
+  transition: transform;
+}
+#link a:hover {
+  text-decoration: underline;
+  color: rgb(244, 129, 255);
+}
+
+/****************/
+#slideArea {
+  flex: 1;
+  overflow: hidden;
+}
+
+#slideArea h2 {
+  display: none;
+}
+#slide {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  position: relative;
+  left: 0;
+}
+
+#slide a,
+#slide img {
+  width: 100%;
+  height: 100%;
+}
+/****************/
+footer {
+  height: 120px;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+footer a {
+  width: 200px;
+}
+footer img {
+  width: 100%;
+}
+footer div {
+  flex: 1;
+  padding-left: 50px;
+  padding: 0 100px;
+}
+footer nav {
+  /* background-color: #f00; */
+  padding-bottom: 10px;
+}
+
+footer nav a {
+  color: #fff;
+}
+
+footer nav a::after {
+  content: "|";
+  padding: 0 10px;
+}
+
+footer nav a:hover {
+  color: aqua;
+  text-decoration: underline;
+}
+footer select {
+  margin: 20px;
+  width: 200px;
+  border-radius: 5%;
+  padding: 7px;
+}
+/*  */
+#popup {
+  width: 600px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: calc((100% - 600px) / 2);
+  top: 100px;
+  padding: 20px;
+  border-radius: 10%;
+  text-align: justify;
+  line-height: 200%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+}
+
+#popup.show {
+  visibility: visible;
+  opacity: 1;
+}
+#popup h3 {
+  padding-bottom: 10%;
+}
+
+#popup button {
+  float: right;
+  padding: 5px 10px;
+  margin-top: 20%;
+  border-radius: 10%;
+  color: #333333;
+}
+#popup button:hover {
+  background: #333333;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  scale: 1.2;
+  transition: 0.3s;
+}
